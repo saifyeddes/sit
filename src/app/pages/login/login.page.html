@@ -1,0 +1,16 @@
+<ion-content class="auth-page">
+  <h2>Login</h2>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="goToHome()">Se connecter</ion-button>
+  <p class="switch">Pas de compte ? <span (click)="goToRegister()">S'inscrire</span></p>
+</ion-content>

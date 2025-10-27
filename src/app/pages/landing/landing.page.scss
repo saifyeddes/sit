@@ -1,0 +1,166 @@
+/* Landing page styles — modern hero with glass card */
+
+:host {
+	display: block;
+	min-height: 100vh;
+	--ion-background-color: transparent;
+}
+
+ion-content {
+	/* use svg background with red/blue gradient, fall back to a soft gradient */
+	--background: linear-gradient(180deg, #fee2e2 0%, #e0f2fe 100%);
+	background-image: url('/assets/background.svg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #081428;
+}
+
+.wrapper {
+	max-width: 920px;
+	margin: 32px auto;
+	padding: 20px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.logo {
+	width: 64px;
+	height: 64px;
+	object-fit: contain;
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+	background: rgba(255,255,255,0.02);
+	padding: 8px;
+}
+
+.header-actions {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.icon-btn {
+	--padding-start: 6px;
+	--padding-end: 6px;
+	color: #e6f7f6;
+	font-size: 20px;
+}
+
+
+.brand h1 {
+	margin: 0;
+	font-size: 18px;
+	color: #0b2540;
+}
+
+.main-card {
+	margin-top: 48px;
+	background: #fff;
+	border-radius: 12px;
+	padding: 28px;
+	box-shadow: 0 6px 20px rgba(10, 30, 60, 0.08);
+	text-align: center;
+}
+
+.main-card h2 {
+	margin: 0 0 8px 0;
+	font-size: 26px;
+}
+
+.subtitle {
+	margin: 0 0 18px 0;
+	color: #4b6478;
+}
+
+.center-actions {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.btn-primary {
+	--background: #0284c7;
+	--color: #fff;
+	border-radius: 8px;
+}
+
+.btn-secondary {
+	--background: transparent;
+	--color: #0b2540;
+	border: 1px solid rgba(11,37,64,0.08);
+	border-radius: 8px;
+}
+
+/* Hero layout */
+.hero {
+	display: grid;
+	grid-template-columns: 1fr 360px;
+	gap: 20px;
+	align-items: center;
+}
+
+.hero-copy { text-align: left; }
+
+.headline {
+	margin: 0 0 8px 0;
+	font-size: 32px;
+	/* gradient from red to deep blue */
+	background: linear-gradient(90deg,#ef4444 0%, #1e40af 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.hero-visual { text-align: center; }
+.hero-visual img.float { max-width: 100%; width: 320px; animation: float 6s ease-in-out infinite; filter: drop-shadow(0 18px 40px rgba(14,23,40,0.45)); }
+
+.note { margin-top: 14px; color: #6c7b87; font-size: 13px; }
+
+/* decorative circles */
+.decor { position: absolute; border-radius: 50%; opacity: 0.12; pointer-events: none; }
+.decor-1 { width: 220px; height: 220px; background: linear-gradient(135deg,#ef4444,#1e40af); top: 48px; right: -60px; animation: float 8s ease-in-out infinite; }
+.decor-2 { width: 140px; height: 140px; background: linear-gradient(135deg,#ef4444 0%, #1e40af 100%); bottom: -40px; left: -40px; animation: float 10s ease-in-out infinite; }
+
+/* entrance animation */
+.main-card { animation: fadeInUp 560ms cubic-bezier(.2,.9,.2,1); position: relative; overflow: hidden; }
+
+/* header icon subtle pulse */
+.icon-btn { transition: transform 200ms ease, color 200ms ease; color: #081428; }
+.icon-btn:hover { transform: translateY(-4px); color: #ef4444; }
+
+/* buttons micro-interaction */
+.btn-primary { transition: transform 160ms ease, box-shadow 160ms ease; --background: #ef4444; --color: #fff; box-shadow: 0 8px 30px rgba(239,68,68,0.18); }
+.btn-primary:active { transform: translateY(2px) scale(0.995); }
+
+/* keyframes */
+@keyframes float {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0px); }
+}
+
+@keyframes fadeInUp {
+	0% { opacity: 0; transform: translateY(12px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 880px) {
+ 	.hero { grid-template-columns: 1fr; }
+	.hero-visual { display: none; }
+
+	.logo { width: 56px; height: 56px; }
+}
+
+/* small animation */
+.hero-card { transform: translateY(0); transition: transform 420ms cubic-bezier(.2,.9,.2,1); }
+.hero-card:hover { transform: translateY(-6px); }
+
+.year::before { content: "2025"; }
+

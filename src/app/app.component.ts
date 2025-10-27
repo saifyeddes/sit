@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-import { IonApp, IonRouterOutlet, IonContent, IonButton, IonHeader, IonCard } from '@ionic/angular/standalone';
+import { CommonModule } from '@angular/common';
+import { IonApp, IonRouterOutlet } from "@ionic/angular/standalone";
+// route-loaded pages will be lazy-loaded by the router
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonContent, IonButton, IonHeader],
+  styleUrls: ['app.component.scss'],
+  imports: [CommonModule, IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-constructor(private alertCtrl: AlertController) {}
-
-  async sayHello() {
-    const alert = await this.alertCtrl.create({
-      header: 'Salut',
-      message: 'Bonjour Mr Sofien',
-      buttons: ['OK'],
-    });
-    await alert.present();
-  }
 }

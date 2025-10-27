@@ -1,0 +1,49 @@
+<ion-content fullscreen>
+  <div class="wrapper">
+    <header class="header" role="banner">
+      <div class="brand">
+        <img src="assets/sit.png" class="logo" alt="SIT logo">
+        <h1>SIT E-learning</h1>
+      </div>
+
+      <div class="header-actions">
+        <ion-button fill="clear" class="icon-btn" (click)="goToLogin()" title="Se connecter">
+          <ion-icon name="log-in"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" class="icon-btn" (click)="goToRegister()" title="S'inscrire">
+          <ion-icon name="person-add"></ion-icon>
+        </ion-button>
+      </div>
+    </header>
+
+    <main class="main-card" role="main">
+      <!-- animated decorative circles -->
+      <div class="decor decor-1" aria-hidden="true"></div>
+      <div class="decor decor-2" aria-hidden="true"></div>
+
+      <div class="hero">
+        <div class="hero-copy">
+          <h2 class="headline">Apprenez. Progressez. Réussissez.</h2>
+          <p class="subtitle">Cours structurés, projets pratiques et suivi personnalisé — commencez maintenant.</p>
+
+          <div class="center-actions">
+            <ion-button class="btn-primary" (click)="goToLogin()">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              Connexion
+            </ion-button>
+            <ion-button class="btn-secondary" (click)="goToRegister()">
+              <ion-icon slot="start" name="person-add"></ion-icon>
+              Inscription
+            </ion-button>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/hero-illustration.png" alt="Illustration apprentissage" class="float" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <p class="note">Rejoignez des milliers d'apprenants sur SIT</p>
+    </main>
+  </div>
+</ion-content>

@@ -7,12 +7,20 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pages/sit-test',
+    redirectTo: 'landing',
     pathMatch: 'full',
   },
   {
-  path: 'sit-test',
-  loadChildren: () => import('./pages/sit-test/sit-test.page').then(m => m.SitTestPageModule)
+    path: 'landing',
+    loadComponent: () => import('./pages/landing/landing.page').then( m => m.LandingPage)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage)
   }
 
 ];
