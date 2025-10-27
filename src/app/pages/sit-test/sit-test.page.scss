@@ -1,0 +1,37 @@
+.sit-header {
+  background: linear-gradient(90deg, var(--ion-color-primary), #2b6aa6);
+  color: var(--ion-color-primary-contrast);
+}
+
+.sit-logo {
+  height: 36px;
+  margin-left: 6px;
+}
+
+.center-box {
+  max-width: 420px;
+  margin: 40px auto;
+}
+
+.btn-login {
+  --background: var(--ion-color-secondary);
+  --border-radius: 8px;
+  --color: #fff;
+}
+
+.btn-demo {
+  --border-radius: 8px;
+  --border-color: var(--ion-color-primary);
+  color: var(--ion-color-primary);
+}
+
+ion-card {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.footer-note {
+  text-align: center;
+  color: #555;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

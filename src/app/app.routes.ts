@@ -7,7 +7,12 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pages/sit-test',
     pathMatch: 'full',
   },
+  {
+  path: 'sit-test',
+  loadChildren: () => import('./pages/sit-test/sit-test.page').then(m => m.SitTestPageModule)
+  }
+
 ];

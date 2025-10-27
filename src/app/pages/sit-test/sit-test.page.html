@@ -1,0 +1,66 @@
+<ion-header translucent>
+  <ion-toolbar class="sit-header">
+    <ion-buttons slot="start">
+      <img src="assets/sit-logo.png" alt="SIT Logo" class="sit-logo" />
+    </ion-buttons>
+    <ion-title>SIT - Test Charte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="center-box">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bienvenue</ion-card-title>
+        <ion-card-subtitle>Test d’intégration charte SIT</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (ngSubmit)="onSubmit()" #form="ngForm">
+          <ion-item>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input
+              type="email"
+              name="email"
+              [(ngModel)]="email"
+              required
+              placeholder="ex: contact@sit.com.tn"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Mot de passe</ion-label>
+            <ion-input
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+            ></ion-input>
+          </ion-item>
+
+          <ion-row class="ion-margin-top">
+            <ion-col size="12">
+              <ion-button expand="block" type="submit" class="btn-login">
+                Se connecter
+              </ion-button>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button
+                expand="block"
+                fill="outline"
+                class="btn-demo"
+                (click)="showDemo()"
+              >
+                Voir la démo
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="footer-note">
+      <p>Logo : SIT — Couleurs : bleu (header) + rouge (CTA)</p>
+    </div>
+  </div>
+</ion-content>

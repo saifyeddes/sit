@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SIT App</string>
+    <string name="title_activity_main">SIT App</string>
+    <string name="package_name">com.sit.testapp</string>
+    <string name="custom_url_scheme">com.sit.testapp</string>
+</resources>

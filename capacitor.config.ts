@@ -1,9 +1,11 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'sit-test',
+  appId: 'com.sit.testapp',
+  appName: 'SIT App',
   webDir: 'www'
+  bundledWebRuntime: false
+
 };
 
 export default config;
