@@ -1,26 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonButton, IonInput } from '@ionic/angular/standalone';
+import { IonContent, IonItem, IonLabel, IonButton, IonInput, IonIcon } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonContent, CommonModule, FormsModule, IonItem, IonLabel, IonButton, IonInput]
+  imports: [IonContent, CommonModule, FormsModule, IonItem, IonLabel, IonButton, IonInput, IonIcon]
 })
 export class LoginPage implements OnInit {
-goToRegister() {
-throw new Error('Method not implemented.');
-}
-goToHome() {
-throw new Error('Method not implemented.');
-}
+  email = '';
+  password = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToRegister() {
+    this.router.navigate(['/register']);
+  }
+
+  goToHome() {
+    // TODO: implement auth
+    this.router.navigate(['/home']);
   }
 
 }

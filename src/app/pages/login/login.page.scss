@@ -1,0 +1,36 @@
+/* Login page styles — match landing visual language */
+
+:host { display:block; }
+
+ion-content { --background: transparent; }
+
+.auth-wrap {
+  max-width: 720px;
+  margin: 36px auto;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.96);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(14,23,40,0.08);
+  animation: fadeInUp 420ms ease;
+}
+
+.auth-header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.auth-brand { display:flex; gap:12px; align-items:center; }
+.auth-brand .logo { width:48px; height:48px; }
+.auth-title { margin:0; font-size:20px; color:#081428; }
+
+.form { margin-top:12px; }
+.form ion-item { margin: 8px 0; --background: transparent; }
+.actions { margin-top: 18px; display:flex; gap:12px; }
+
+.btn-primary { --background: #ef4444; --color:#fff; border-radius:8px; }
+.btn-secondary { --background: transparent; --color:#081428; border:1px solid rgba(11,37,64,0.06); border-radius:8px; }
+
+@keyframes fadeInUp { 0%{opacity:0; transform:translateY(10px);}100%{opacity:1;transform:none;} }
+
+.switch { text-align:center; margin-top:12px; color:#4b6478; }
+.switch span { color:#ef4444; cursor:pointer; }
