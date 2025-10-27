@@ -1,0 +1,7 @@
+{
+  "name": "sit-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
